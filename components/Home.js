@@ -1,11 +1,12 @@
 import React, { useEffect } from "react";
-import { Button, Typography } from "@mui/material";
-import GitHubIcon from "@mui/icons-material/GitHub";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import { Typography, Button } from "@mui/material";
 import FileDownloadIcon from "@mui/icons-material/FileDownload";
-import AOS from "aos"
-import "aos/dist/aos.css"
+import { EmailSharp, Phone } from "@mui/icons-material";
+
 import "animate.css";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 export default function Home() {
   useEffect(() => {
     AOS.init({
@@ -17,53 +18,68 @@ export default function Home() {
     AOS.refresh();
   }, []);
   return (
-    <>
-      <section id="home">
-        <Typography variant="h5" color="white" py={3}>
-          Hello,
-          <span className=" text-green-600"> Im Amirhossein Pooladi </span>
-          Front-End Developer
+    <section id="aboutMe" className=" bg-slate-700  leading-relaxed h-max  ">
+      <div data-aos="fade-down">
+        <Typography
+          className=" leading-relaxed pt"
+          color="white"
+          variant="h5"
+          py={3}
+          px={3}
+        >
+          About <span className=" text-green-600"> Me</span>{" "}
         </Typography>
-        <Typography variant="body1" color="white" py={2}>
-          With knowledge in web development and design, I offer you greatest
-          quality of work with finest resault.
-        </Typography>
-        <div data-aos="zoom-in-down">
-          <div className=" my-20">
-            <a href="https://github.com/amirhpooladi" target="_blank">
-              <Button className=" hover: bg-slate-700 mr-2   ">
-                <GitHubIcon
-                  color=" text-green-600"
-                  className=" text-3xl m-3 animate__animated animate__heartBeat animate__infinite "
-                />
-              </Button>
-            </a>
 
-            <a
-              href="https://www.linkedin.com/in/amirhossein-pooladi-6b4679277/"
-              target="_blank"
-            >
-              <Button className=" hover: bg-slate-700 mr-2 ">
-                <LinkedInIcon
-                  color=" text-green-600"
-                  className=" text-3xl m-3 animate__animated animate__heartBeat animate__infinite "
-                />
-              </Button>
+          <Typography  className=" leading-relaxed pt"
+          color="white"
+          variant="h6"
+          py={3}
+          px={3}>Name : Mohammad Bayat</Typography>
+          <Typography  className=" leading-relaxed pt"
+          color="white"
+          variant="h6"
+          py={3}
+          px={3}>Current position : Assistant Professor</Typography>
+          <Typography  className=" leading-relaxed pt"
+          color="white"
+          variant="h6"
+          py={3}
+          px={3}>Date of Birth : Dec 29th , 1984</Typography>
+          <Typography  className=" leading-relaxed pt"
+          color="white"
+          variant="h6"
+          py={3}
+          px={3}>Language : English , Persian</Typography>
+          <Typography  className=" leading-relaxed pt"
+          color="white"
+          variant="h6"
+          py={3}
+          px={3}>
+            <a href="mailto:m-baiat@araku.ac.ir">
+              <EmailSharp /> m-baiat@araku.ac.ir
             </a>
-
-            <a href="AmirhosseinPooladi_Resume1.pdf" download>
-              <Button className=" hover: bg-slate-700 mr-2  ">
-                <FileDownloadIcon
-                  color=" text-green-600"
-                  className=" text-3xl m-3 animate__animated animate__bounce animate__infinite animate__slow"
-                />
-
-                <span className=" text-green-600">resume</span>
-              </Button>
+          </Typography>
+          <Typography  className=" leading-relaxed pt"
+          color="white"
+          variant="h6"
+          py={3}
+          px={3}>
+            <a href="tel:(+33) 06 35 26 23 51r">
+              <Phone /> (+33) 06 35 26 23 51
             </a>
-          </div>
-        </div>
-      </section>
-    </>
+          </Typography>
+       
+        <a href="BAYAT_Mohammad-CV-final.docx" download>
+          <Button className=" hover: bg-slate-700 ">
+            <FileDownloadIcon
+              color=" text-green-600"
+              className=" text-3xl m-3 animate__animated animate__bounce animate__infinite animate__slow "
+            />
+
+            <span className=" text-green-600">resume</span>
+          </Button>
+        </a>
+      </div>
+    </section>
   );
 }

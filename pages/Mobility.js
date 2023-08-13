@@ -2,9 +2,9 @@ import React, { useEffect } from "react";
 import { Typography } from "@mui/material";
 import "animate.css";
 import AOS from "aos";
-import "aos/dist/aos.css"
+import "aos/dist/aos.css";
 
-export default function AboutMe() {
+export default function Mobility() {
   useEffect(() => {
     AOS.init({
       offset: 200,
@@ -15,8 +15,10 @@ export default function AboutMe() {
     AOS.refresh();
   }, []);
   return (
-    
-    <section id="aboutMe" className=" bg-slate-700  leading-relaxed h-max  ">
+    <section
+      id="Mobility"
+      className=" bg-slate-700  leading-relaxed h-max py-16"
+    >
       <div data-aos="fade-down">
         <Typography
           className=" leading-relaxed pt"
@@ -24,24 +26,19 @@ export default function AboutMe() {
           variant="h5"
           py={3}
           px={3}
-          fontFamily={"cursive"}
         >
-          About <span className=" text-green-600"> Me</span>{" "}
+          Mobility
         </Typography>
 
         <Typography
-          className=" leading-8 pb-60 space-y-4 lg:px-40 transition will-change-scroll"
+          className=" leading-8  space-y-4 lg:px-40 transition will-change-scroll"
           color=" white"
           py={2}
           px={2}
         >
-          As a junior programmer interested in front-end and web development, I
-          am eager to working in dynamic enviroments and I enjoy learning. I am
-          a responsible and diligent person in team works and I am always
-          looking for innovative ideas.
+          Having 4-year residence card
         </Typography>
-        </div>
+      </div>
     </section>
-   
   );
 }
